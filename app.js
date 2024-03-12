@@ -11,6 +11,15 @@ container.appendChild(grid);
 let currentInk = "black";
 let isRainbow = false;
 
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value; // Display the default slider value
+
+// Update the current slider value (each time you drag the slider handle)
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+
 // Add 16x16 grid
 function createGrid() {
     let mouseClicked = false;
@@ -83,6 +92,8 @@ function generateRandomColor() {
         + ',' + color2
         + ',' + color3 + ')';
 }
+
+
 
 
 createGrid();
