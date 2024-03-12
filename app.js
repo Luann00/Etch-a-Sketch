@@ -3,9 +3,7 @@ const container = document.querySelector('.container');
 
 const grid = document.createElement("div");
 grid.className = "grid";
-grid.style.display = 'grid';
 grid.style.gridTemplateColumns = `repeat(16, 1fr)`;
-
 grid.style.transition = '200ms ease 50ms';
 container.appendChild(grid);
 
