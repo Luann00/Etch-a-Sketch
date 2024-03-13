@@ -3,7 +3,6 @@ const container = document.querySelector('.container');
 
 const grid = document.createElement("div");
 grid.className = "grid";
-grid.style.gridTemplateColumns = `repeat(16, 1fr)`;
 grid.style.transition = '200ms ease 50ms';
 container.appendChild(grid);
 
@@ -18,13 +17,18 @@ output.innerHTML = slider.value + "x " + slider.value;
 // Update the current slider value (each time you drag the slider handle)
 slider.oninput = function() {
   output.innerHTML = this.value + "x " + this.value;
+  createGrid()
 }
 
 // Add 16x16 grid
 function createGrid() {
+    grid.innerHTML = ''; 
+    const gridSize = slider.value; 
+    grid.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`; 
+
     let mouseClicked = false;
-    for (let i = 0; i < 16; i++) {
-        for (let j = 0; j < 16; j++) {
+    for (let i = 0; i < gridSize; i++) {
+        for (let j = 0; j < gridSize; j++) {
             const div = document.createElement('div');
 
             div.addEventListener("mousedown", function () {
@@ -57,6 +61,7 @@ function createGrid() {
         mouseClicked = false;
     })
 }
+
 
 function ink(item) {
     item.style.backgroundColor = currentInk;
