@@ -68,7 +68,7 @@ function ink(item) {
 }
 
 function reset() {
-    container.innerHTML = "";
+    grid.innerHTML = "";
     createGrid();
 }
 
