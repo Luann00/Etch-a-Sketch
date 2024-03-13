@@ -1,10 +1,8 @@
 
 const container = document.querySelector('.container');
 
-const grid = document.createElement("div");
-grid.className = "grid";
+const grid = document.querySelector(".grid");
 grid.style.transition = '200ms ease 50ms';
-container.appendChild(grid);
 
 
 let currentInk = "black";
@@ -97,8 +95,6 @@ function generateRandomColor() {
         + ',' + color2
         + ',' + color3 + ')';
 }
-
-
 
 
 createGrid();

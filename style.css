@@ -11,6 +11,11 @@ p {
     margin-bottom: 0px;
 }
 
+.test{
+    display:flex;
+    flex-direction: row;
+}
+
 .grid {
     display: grid;
     width: 400px;
