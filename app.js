@@ -12,13 +12,13 @@ var slider = document.getElementById("myRange");
 var output = document.getElementById("demo");
 output.innerHTML = slider.value + "x " + slider.value;
 
-// Update the current slider value (each time you drag the slider handle)
+//update the current slider value
 slider.oninput = function() {
   output.innerHTML = this.value + "x " + this.value;
   createGrid()
 }
 
-// Add 16x16 grid
+//Add 16x16 grid at he beginning
 function createGrid() {
     grid.innerHTML = ''; 
     const gridSize = slider.value; 
@@ -84,8 +84,8 @@ function setBlack() {
     currentInk = "black";
 }
 
-/*This method generates a random color in the RGB space
- and returns it*/
+/this method generates a random color in the RGB space
+ and returns it/
 function generateRandomColor() {
     var color1 = Math.floor(Math.random() * 255) + 1;
     var color2 = Math.floor(Math.random() * 255) + 1;
