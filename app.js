@@ -84,8 +84,7 @@ function setBlack() {
     currentInk = "black";
 }
 
-/this method generates a random color in the RGB space
- and returns it/
+
 function generateRandomColor() {
     var color1 = Math.floor(Math.random() * 255) + 1;
     var color2 = Math.floor(Math.random() * 255) + 1;
