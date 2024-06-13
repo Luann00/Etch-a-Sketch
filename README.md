@@ -1,4 +1,4 @@
-# Etch-a-Sketch2
+# Etch-a-Sketch
 
 This project was created as part of The Odin Project. I used this project to practice some CSS and manipulating the DOM with JavaScript.
 
